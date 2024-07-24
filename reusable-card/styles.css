@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #121212;
+    color: #ffffff;
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    padding: 16px;
+}
+
+.card {
+    background-color: #1f1f1f;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    border: 1px solid transparent; /* Increase border thickness */
+    border-image-slice: 1;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    animation: borderAnimation 3s infinite;
+}
+
+@keyframes borderAnimation {
+    0% { border-image-source: linear-gradient(45deg, red, yellow, blue, red); }
+    25% { border-image-source: linear-gradient(45deg, yellow, blue, red, yellow); }
+    50% { border-image-source: linear-gradient(45deg, blue, red, yellow, blue); }
+    75% { border-image-source: linear-gradient(45deg, red, yellow, blue, red); }
+    100% { border-image-source: linear-gradient(45deg, yellow, blue, red, yellow); }
+}
+
+.poster {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 16px;
+    color: #ffffff;
+}
+
+.title {
+    font-size: 1.2em; /* Smaller font size */
+    margin: 0 0 8px;
+}
+
+.price, .speaker, .venue-time {
+    margin: 4px 0;
+}
+
+.reg-link {
+    display: inline-block;
+    margin: 8px 0;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.2s;
+}
+
+.reg-link:hover {
+    background-color: #0056b3;
+}
